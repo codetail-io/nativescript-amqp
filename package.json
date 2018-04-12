@@ -1,0 +1,10 @@
+{
+  "name": "tns-amqp",
+  "version": "0.0.2",
+  "main": "index.js",
+  "nativescript": {
+    "platforms": {
+      "android": "3.0.0"
+    }
+  }
+}
