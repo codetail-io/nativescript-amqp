@@ -1,5 +1,9 @@
 android {
-    
+    productFlavors {
+        "nativescript-amqp" {
+            dimension "nativescript-amqp"
+        }
+    }
 }
 
 dependencies {
