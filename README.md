@@ -27,6 +27,13 @@ use de la siguiente forma:
         this.channel.queueBind(this.queueName, "hello-exchange", "");
         this.recevieMessage();
       }
+      sendMessage() {
+        let message = String(Math.floor(Math.random() * 100000) + 1);
+        this.messageService.sendMessage(message, this.channel, this.messagePropertyAux);
+        const text = new java.lang.String(message);
+        const data = text.getBytes();
+        this.channel.basicPublish("hello-exchange", "", null, text.getBytes());
+      }
       recevieMessage() {
         let body: any;
         const envelope = new this.client.Envelope(1000, false, "hello-exchange", "routingKey");
@@ -57,3 +64,8 @@ cree una classe llamada ConsumerDefault que se hereda de DefaultConsumer
     }
 
 
+Un ejemplo de la implementación esta en : https://github.com/codetail-io/amqp-demo.git
+
+
+Verifique que el servidor rabbitmq este conectado.
+ejemnplo de publisher/suscriber en java https://www.rabbitmq.com/tutorials/tutorial-three-java.html
