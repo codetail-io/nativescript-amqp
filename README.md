@@ -5,7 +5,7 @@ Esta disponible para android, para ios no esta.
 
 use de la siguiente forma:
 
-    import { RabbitmqClient } from 'tns-amqp';
+    import { RabbitmqClient } from 'nativescript-amqp';
 
     export class ItemsComponent {
       client:any;
@@ -47,7 +47,7 @@ use de la siguiente forma:
 cree una classe llamada ConsumerDefault que se hereda de DefaultConsumer
 
 
-    import { DefaultConsumer } from 'tns-amqp';
+    import { DefaultConsumer } from 'nativescript-amqp';
     declare const java: any;
 
     export class ConsumerDefault extends DefaultConsumer {
