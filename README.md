@@ -1,5 +1,5 @@
 
-# tns-amqp
+# nativescript-amqp
 Este es una implementación basica de cliente para rabbitmq.
 Esta disponible para android, para ios no esta.
 
